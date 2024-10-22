@@ -63,16 +63,13 @@ class Controller
             ->select();
     }
 
-    protected function forward($route)
-    {
-        App::run($route);
-    }
+     protected function forward($route)
+     {
+         App::run($route);
+     }
+    
 
-
-    protected function redirect($route)
-    {
-        $server_host = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'];
-        $url = $server_host . route::getBP() . $route;
-        header("Location: $url");
-    }
+     function redirect ($url){
+        header('Location: '.$url);
+     }
 }
