@@ -1,5 +1,5 @@
 <?php
-
+//мій коментар
 namespace Controllers;
 
 use Core\Controller;
